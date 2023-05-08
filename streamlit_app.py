@@ -30,8 +30,8 @@ s.header("Fruityvice Fruit Advice!")
 
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-s.text(fruityvice_response.json()) # just writes data to the screen
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
+# s.text(fruityvice_response.json()) # just writes data to the screen
 
 # take the json version of the response and normalize it
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
