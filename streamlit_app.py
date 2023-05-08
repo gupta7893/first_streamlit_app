@@ -27,10 +27,11 @@ s.dataframe(fruits_to_show)
 # New section to display Fruityvice api response
 
 s.header("Fruityvice Fruit Advice!")
-
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+s.write('The user entered ', fruit_choice)
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 # s.text(fruityvice_response.json()) # just writes data to the screen
 
 # take the json version of the response and normalize it
