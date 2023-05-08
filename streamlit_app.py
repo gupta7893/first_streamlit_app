@@ -26,6 +26,9 @@ s.dataframe(fruits_to_show)
 
 # New section to display Fruityvice api response
 
+s.header("Fruityvice Fruit Advice!")
+
+
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 s.text(fruityvice_response)
